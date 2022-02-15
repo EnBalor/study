@@ -1,34 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 char a[16] = "abcdef";
 
-void main()
-{
-	insert(3, 'g');
-	Delete(2);
-	append('h');
-
-	printf("초기 : %s\n", a);
-	printf("g삽입 : %s\n", a);
-	printf("c삭제 : %s\n", a);
-	printf("h추가 : %s\n", a);
-}
-
 void insert(int position, char ch)
 {
+	printf("초기 : %s\n", a);
 	memmove(a + position + 1, a + position, strlen(a) - position + 1);
+	a[position] = ch;
+	printf("g삽입 : %s\n", a);
 }
 
 void Delete(int position)
 {
 	memmove(a + position, a + position + 1, strlen(a) - position);
+	printf("c삭제 : %s\n", a);
 }
 
 void append(char ch)
 {
 	insert(strlen(a), ch);
+	printf("h추가 : %s\n", a);
+}
+
+void main()
+{
+	insert(3, 'g');
+	append('h');
 }
 
 /*

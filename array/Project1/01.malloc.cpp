@@ -12,7 +12,7 @@ void main()
 
 	// 공간 할당
 	// malloc는 void 값을 반환하기 때문에 (int *)로 위 배열과 자료형을 일치하기 위해 형변환
-	// int형크기 * 4 메모리 할당
+	// int형크기 * 3 메모리 할당
 	pArr = (int *)malloc(sizeof(int) * 3);
 
 	if (pArr == NULL)

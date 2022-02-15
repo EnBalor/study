@@ -27,9 +27,9 @@ void main()
 	printf("\n");
 
 	//할당된 메모리 재할당
-	realloc(pArr, sizeof(int) * 5);
+	realloc(pArr, sizeof(int) * 3);
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		pArr[i] = arr[i];
 		printf("%d\n", pArr[i]);
