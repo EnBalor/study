@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
+	int num = 5;
+
 	vector<int> v;
 	// 비어있는 vector를 생성한다
 
@@ -43,13 +45,13 @@ int main()
 	v.pop_back();
 	// 마지막 원소 제거
 
-	v.reserve(n);
+	v.reserve(num);
 	// n개의 원소를 저장할 위치를 예약
 
-	v.resize(n);
+	v.resize(num);
 	// 크기를 n으로 변경, 더 커질 경우 default 값인 0을 ㅗ초기화
 
-	v.resize(n, 3);
+	v.resize(num, 3);
 	// 크기를 n으로 변경, 더 커질 경우 인자값을 3으로 초기화
 
 	v.size();
@@ -62,10 +64,11 @@ int main()
 		reserve를 이용해 미리 할당하면 효율적
 	*/
 
-	v.insert(2, 3, 4);
+	
+	v2.insert(v2.begin() + 2, 3, 4);
 	// 2번째 위치에 3개의 4를 삽입
 
-	v.insert(2, 3);
+	v2.insert(v2.begin() + 2, 3);
 	// 2번째 위치에 3의 값을 삽입
 
 	return 0;
